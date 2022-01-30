@@ -1,4 +1,3 @@
-//AIzaSyDzAfY_JsSMB1_HRdJnnZmk64w0abhHE70
 //  'https://youtube.googleapis.com/youtube/v3/search?part=snippet&q=eye&key=[YOUR_API_KEY]' \
 //  --header 'Accept: application/json' \
 //  --compressed

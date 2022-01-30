@@ -1,0 +1,123 @@
+body{
+    /* background:#e4e4e3 */
+    background: #000;
+    font-family:'Open Sans', sans-serif;
+}
+
+
+.wrapper {
+    position: absolute;
+    top: 6%;
+    left: 50%;
+    transform: translate(-50%, 3%);
+}
+
+
+.container {
+    width: 0px;
+    height: 50px;
+    background: transparent;
+    text-align: center;
+    line-height: 45px;
+    padding-right: 50px;
+    position: relative;
+    transition: all 0.5s ease;
+}
+#userinput {
+    border: 0;
+    /* border-bottom: 1px solid #000; */
+    border-bottom: 1px solid #e4e4e3;
+    float: right;
+  /*  width: 70%;
+    padding: 5px 0;
+    outline: none;
+    background: transparent; */
+    transition: all 0.3s ease;
+}
+
+.container .fa {
+    /* color: #000; */
+    color: #e4e4e3;
+    position: absolute;
+    right: 15px;
+    top: 8px;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+#userinput:focus{
+    /* color: #000; */
+    color: #e4e4e3;
+    /* color: #00B4CC; */
+}
+
+.container.active {
+    width: 250px;
+    padding-left: 25px;
+    transition: all 0.5s ease;
+}
+
+#input.active {
+    width:98%;
+    padding-left: 5px;
+    transition: all 0.5s 0.8s ease;
+}
+
+.pixel-spinner, .pixel-spinner * {
+    visibility: hidden;
+    box-sizing: border-box;
+}
+
+.pixel-spinner {
+    position: absolute;
+    left: 50%;
+    top: 30%;
+    height: 70px;
+    width: 70px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.pixel-spinner .pixel-spinner-inner {
+    width: calc(70px / 7);
+    height: calc(70px / 7);
+    background-color: #e4e4e3;
+    color: #e4e4e3;
+    box-shadow: 15px 15px  0 0,
+                -15px -15px  0 0,
+                15px -15px  0 0,
+                -15px 15px  0 0,
+                0 15px  0 0,
+                15px 0  0 0,
+                -15px 0  0 0,
+                0 -15px 0 0;
+    animation: pixel-spinner-animation 2000ms linear infinite;
+}
+
+@keyframes pixel-spinner-animation {
+    50% {
+        box-shadow: 20px 20px 0px 0px,
+                    -20px -20px 0px 0px,
+                    20px -20px 0px 0px,
+                    -20px 20px 0px 0px,
+                    0px 10px 0px 0px,
+                    10px 0px 0px 0px,
+                    -10px 0px 0px 0px,
+                    0px -10px 0px 0px;
+    }
+    75% {
+        box-shadow: 20px 20px 0px 0px,
+                    -20px -20px 0px 0px,
+                    20px -20px 0px 0px,
+                    -20px 20px 0px 0px,
+                    0px 10px 0px 0px,
+                    10px 0px 0px 0px,
+                    -10px 0px 0px 0px,
+                    0px -10px 0px 0px;
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
